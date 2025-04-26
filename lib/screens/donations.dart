@@ -6,6 +6,8 @@ class Donations extends StatelessWidget {
 
   void _showPopup(BuildContext context, String title) {
     final TextEditingController _inputController = TextEditingController();
+    final TextEditingController _secondInputController =
+        TextEditingController();
 
     showDialog(
       context: context,
@@ -42,6 +44,18 @@ class Donations extends StatelessWidget {
                   hintText: hint,
                 ),
               ),
+              if (title == 'Materials' || title == 'Food') ...[
+                const SizedBox(height: 15),
+                const Text('Location'),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: _secondInputController,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter the location',
+                  ),
+                ),
+              ],
             ],
           ),
           actions: [
@@ -52,8 +66,8 @@ class Donations extends StatelessWidget {
             TextButton(
               onPressed: () {
                 final input = _inputController.text;
-                print("Donated $input for $title");
-                // Add further logic here
+                final secondInput = _secondInputController.text;
+                print("Donated $input for $title. Notes: $secondInput");
                 Navigator.of(context).pop();
               },
               child: const Text('Confirm'),
