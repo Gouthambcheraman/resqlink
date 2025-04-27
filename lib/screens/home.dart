@@ -650,7 +650,7 @@ class Home extends StatelessWidget {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 8),
+                                        padding: const EdgeInsets.only(top: 5),
                                         child: Container(
                                           width: 80,
                                           height: 30,

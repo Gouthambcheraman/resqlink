@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:resqlink/screens/donations.dart';
+import 'package:resqlink/screens/volunteer.dart';
 
 class One extends StatelessWidget {
   const One({super.key});
@@ -79,7 +80,12 @@ class One extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 2, left: 2),
                     child: TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Volunteer()));
+                      },
                       icon: Icon(
                         Icons.group_add,
                         color: Colors.white,

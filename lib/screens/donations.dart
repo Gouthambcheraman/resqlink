@@ -94,6 +94,15 @@ class Donations extends StatelessWidget {
       ),
       body: Stack(
         children: [
+          Container(
+            height: 667,
+            width: 375,
+            child: Image.network(
+              "https://i.postimg.cc/Kzz08w8v/10-Worst-Things-to-Donate-After-a-Disaster.jpg",
+              fit: BoxFit.cover,
+              opacity: AlwaysStoppedAnimation(0.3),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 120),
             child: ExpandablePageView(

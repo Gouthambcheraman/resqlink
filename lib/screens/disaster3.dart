@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:resqlink/screens/donations.dart';
+import 'package:resqlink/screens/volunteer.dart';
 
 class Three extends StatelessWidget {
   const Three({super.key});
@@ -80,7 +82,12 @@ class Three extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 2, left: 2),
                     child: TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Volunteer()));
+                      },
                       icon: Icon(
                         Icons.group_add,
                         color: Colors.white,
@@ -110,7 +117,12 @@ class Three extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 2, left: 0),
                     child: TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Donations()));
+                      },
                       icon: Icon(
                         Icons.attach_money,
                         color: Colors.white,
