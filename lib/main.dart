@@ -8,6 +8,7 @@ import 'package:resqlink/screens/donations.dart';
 import 'package:resqlink/screens/earthquake.dart';
 import 'package:resqlink/screens/home.dart';
 import 'package:resqlink/screens/login.dart';
+import 'package:resqlink/screens/profile.dart';
 import 'package:resqlink/screens/rescue.dart';
 // ignore: unused_import
 import 'package:resqlink/screens/signup.dart';
@@ -30,6 +31,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF1B1919)),
           useMaterial3: false,
         ),
-        home: Home());
+        home: ProfileScreen());
   }
 }

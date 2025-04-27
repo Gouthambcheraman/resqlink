@@ -4,6 +4,7 @@ import 'package:resqlink/screens/disaster2.dart';
 import 'package:resqlink/screens/disaster3.dart';
 import 'package:resqlink/screens/donations.dart';
 import 'package:resqlink/screens/earthquake.dart';
+import 'package:resqlink/screens/profile.dart';
 import 'package:resqlink/screens/rescue.dart';
 
 class Home extends StatelessWidget {
@@ -369,7 +370,10 @@ class Home extends StatelessWidget {
                 width: 40,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen()));
+                },
                 icon: Icon(Icons.person),
                 color: Colors.white,
                 iconSize: 32,

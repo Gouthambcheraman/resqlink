@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'package:resqlink/screens/home.dart';
 
 class Volunteer extends StatefulWidget {
@@ -11,12 +13,42 @@ class Volunteer extends StatefulWidget {
 class _VolunteerState extends State<Volunteer> {
   bool isChecked = false; // Checkbox state
 
+  // 🔵 Controllers for text fields
+  TextEditingController fullNameController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController locationController = TextEditingController();
+
+  // 🔵 Function to send data to backend
+  Future<void> submitVolunteerData(String fullName, String phone, String location) async {
+    const String apiUrl = 'http://your-server-ip:5000/volunteer'; // 👉 Change this to your server IP
+
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({
+          "fullName": fullName,
+          "phone": phone,
+          "location": location,
+        }),
+      );
+
+      if (response.statusCode == 201) {
+        print('Volunteer registered successfully');
+      } else {
+        print('Failed to register volunteer');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          // ✅ First: Background image at the bottom
+          // ✅ Background Image
           Container(
             width: double.infinity,
             height: double.infinity,
@@ -27,7 +59,7 @@ class _VolunteerState extends State<Volunteer> {
             ),
           ),
 
-          // ✅ Then your content above the background
+          // ✅ Logo
           Padding(
             padding: const EdgeInsets.only(top: 30, left: 118),
             child: SizedBox(
@@ -38,6 +70,8 @@ class _VolunteerState extends State<Volunteer> {
               ),
             ),
           ),
+
+          // ✅ Heading
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 50),
             child: Text(
@@ -58,6 +92,7 @@ class _VolunteerState extends State<Volunteer> {
                   Container(
                     width: 250,
                     child: TextField(
+                      controller: fullNameController,
                       decoration: InputDecoration(
                         labelText: 'FULL NAME',
                         border: UnderlineInputBorder(),
@@ -68,6 +103,7 @@ class _VolunteerState extends State<Volunteer> {
                   Container(
                     width: 250,
                     child: TextField(
+                      controller: phoneController,
                       decoration: InputDecoration(
                         labelText: 'PHONE',
                         border: UnderlineInputBorder(),
@@ -78,6 +114,7 @@ class _VolunteerState extends State<Volunteer> {
                   Container(
                     width: 250,
                     child: TextField(
+                      controller: locationController,
                       decoration: InputDecoration(
                         labelText: 'LOCATION',
                         border: UnderlineInputBorder(),
@@ -113,23 +150,30 @@ class _VolunteerState extends State<Volunteer> {
             ),
           ),
 
-          // ✅ Submit button (Positioned to avoid overlap)
+          // ✅ Submit button
           Positioned(
             bottom: 40,
             left: 50,
             right: 50,
             child: ElevatedButton(
-              onPressed: () {
-                print("Button pressed");
-                // Here you can show a pop-up if needed.
+              onPressed: () async {
                 if (isChecked) {
+                  // Collect values
+                  String fullName = fullNameController.text;
+                  String phone = phoneController.text;
+                  String location = locationController.text;
+
+                  // Send to backend
+                  await submitVolunteerData(fullName, phone, location);
+
+                  // Show Thank You pop-up
                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
                         title: Text("Thank you!"),
                         content: Text(
-                            "You will be notified when you become a volunteer. "),
+                            "You will be notified when you become a volunteer."),
                         actions: [
                           TextButton(
                             onPressed: () {
