@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resqlink/screens/home.dart';
 
-class Earthquake extends StatelessWidget {
-  const Earthquake({super.key});
+class Tsunami extends StatelessWidget {
+  const Tsunami({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,67 +41,68 @@ class Earthquake extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     child: Column(
                       children: [
-                        Text("Earthquake Safety Guidelines",
+                        Text("Tsunami Safety Guidelines 🌊",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 20)),
                         Text(
                           """
 
-Before an Earthquake (Preparedness)
+Before a Tsunami (Preparedness)
+
+✅ Know Your Risk
+Check if you live in a tsunami-prone coastal area.
+Learn evacuation routes and nearest high ground locations.
 
 ✅ Create an Emergency Plan
-Identify safe places in each room (under sturdy furniture, against an interior wall).
-Practice "Drop, Cover, and Hold On" drills with family or colleagues.
+Practice evacuation drills with your family.
+Identify safe places at least 30 meters (100 feet) above sea level or 2 km (1.2 miles) inland.
 
 ✅ Prepare an Emergency Kit
-First-aid supplies, bottled water, non-perishable food.
-Flashlight, extra batteries, whistle, essential medicines.
+Water, food, flashlight, batteries, whistle, first aid kit.
 Important documents (ID, insurance, emergency contacts).
 
-✅ Secure Your Home & Workplace
-Anchor heavy furniture (shelves, cabinets) to walls.
-Avoid placing heavy objects on high shelves.
-Fix gas cylinders and electrical appliances securely.
-
-
-During an Earthquake (Response)
-If You Are Indoors
-🔹 Drop, Cover, and Hold On
-Drop to the ground to prevent falling.
-Cover your head and neck with your arms.
-
-Hold On to sturdy furniture (table, desk) until the shaking stops.
-🚫 DO NOT run outside during shaking—it’s dangerous.
-📌 If in bed, stay there and cover your head with a pillow.📌 If in a wheelchair, lock the wheels and protect your head and neck.📌 If in a high-rise building, stay inside and move away from windows.
-
-If You Are Outdoors
-✅ Move to an open space away from buildings, trees, streetlights, and power lines.
-✅ Drop to the ground and cover your head until the shaking stops.
-
-If You Are in a Moving Vehicle
-✅ Pull over safely and stay inside the vehicle.
-✅ Avoid stopping under bridges, overpasses, or near buildings.
-
-After an Earthquake (Recovery & Safety Measures)
-
-✅ Check for Injuries
-Provide first aid to those in need.
-Call emergency services if necessary.
-
-✅ Check for Hazards
-Turn off gas, electricity, and water if you suspect damage.
-Beware of aftershocks—stay alert.
-
-✅ Evacuate If Necessary
-If in a tsunami-prone area, move to higher ground immediately.
-Avoid using elevators.
-
 ✅ Stay Informed
-Listen to emergency broadcasts for updates.
-Avoid using phones unless for emergencies.
+Follow weather updates and tsunami warnings on TV, radio, or mobile apps.
+Sign up for local disaster alerts.
 
-✅ Help Others
-Check on neighbors, especially elderly or disabled individuals.""",
+
+During a Tsunami (Response)
+
+If a Tsunami Warning is Issued
+🔹 Move to Higher Ground Immediately!
+
+Do not wait for official warnings if you feel a strong earthquake.
+
+Evacuate inland or to high ground without delay.
+🔹 Natural Warning Signs of a Tsunami:
+
+Strong earthquake (lasting over 20 seconds near the coast).
+Sudden ocean recession (water pulls away from the shore unusually far).
+
+Loud roaring sound coming from the ocean.
+🚨 If you notice these signs, evacuate immediately! 🚨
+📌 Do NOT go near the shore to watch the waves!
+
+After a Tsunami (Recovery & Safety Measures)
+
+✅ Wait for Official Clearance
+Tsunami waves may come in multiple surges—do not return too soon.
+Follow emergency authority updates before going back to coastal areas.
+
+✅ Avoid Flooded Areas
+Do not walk or drive through floodwaters (they may contain debris or be electrically charged).
+
+✅ Check for Injuries & Help Others
+Administer first aid if necessary.
+Assist children, elderly, and disabled individuals.
+
+✅ Stay Alert for Aftershocks
+Another tsunami could follow due to seismic activity.
+
+✅ Report Damage & Seek Shelter if Needed
+Check for damaged utilities (gas leaks, electrical hazards).
+U
+se emergency shelters if your home is unsafe.""",
                           style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ],

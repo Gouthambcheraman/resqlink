@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:resqlink/screens/home.dart';
 
-class Earthquake extends StatelessWidget {
-  const Earthquake({super.key});
+class Fire extends StatelessWidget {
+  const Fire({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,67 +41,70 @@ class Earthquake extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     child: Column(
                       children: [
-                        Text("Earthquake Safety Guidelines",
+                        Text("Fire Safety Guidelines 🔥",
                             style:
                                 TextStyle(color: Colors.white, fontSize: 20)),
                         Text(
                           """
 
-Before an Earthquake (Preparedness)
+Before a Fire (Preparedness)
 
-✅ Create an Emergency Plan
-Identify safe places in each room (under sturdy furniture, against an interior wall).
-Practice "Drop, Cover, and Hold On" drills with family or colleagues.
+✅ Install Fire Safety Equipment
+Smoke alarms on every floor and in key areas (bedrooms, kitchen).
+Fire extinguishers in accessible locations (kitchen, garage, near exits).
 
-✅ Prepare an Emergency Kit
-First-aid supplies, bottled water, non-perishable food.
-Flashlight, extra batteries, whistle, essential medicines.
-Important documents (ID, insurance, emergency contacts).
+✅ Create an Escape Plan
+Identify two exit routes from every room.
+Practice fire drills with your family or colleagues.
+Designate a safe meeting point outside.
 
-✅ Secure Your Home & Workplace
-Anchor heavy furniture (shelves, cabinets) to walls.
-Avoid placing heavy objects on high shelves.
-Fix gas cylinders and electrical appliances securely.
+✅ Keep Fire Hazards in Check
+Avoid overloading electrical outlets.
+Store flammable items (gasoline, chemicals) safely.
+Never leave cooking unattended.
+
+✅ Know How to Use a Fire Extinguisher
+Use the PASS method:
+Pull the pin.
+Aim at the base of the fire.
+Squeeze the handle.
+Sweep side to side.
+During a Fire (Response)
+
+If You See a Fire
+🚨 Alert Others & Call Emergency Services (Fire Department: 101 in India, 911 in the U.S.)
+
+If You Are Inside a Building
+🔹 Evacuate Immediately!
+Stay Low (crawl under smoke, as heat and toxic fumes rise).
+Check Doors for Heat before opening (use the back of your hand).
+Close Doors Behind You to slow the fire’s spread.
+
+🚫 DO NOT use elevators!🚫 DO NOT re-enter a burning building!
+📌 If trapped in a room, block gaps under the door with a wet cloth and signal for help from a window.
+
+If Your Clothes Catch Fire
+🔥 STOP, DROP, and ROLL
+Stop running.
+Drop to the ground.
+Roll back and forth to smother the flames.
 
 
-During an Earthquake (Response)
-If You Are Indoors
-🔹 Drop, Cover, and Hold On
-Drop to the ground to prevent falling.
-Cover your head and neck with your arms.
+After a Fire (Recovery & Safety Measures)
 
-Hold On to sturdy furniture (table, desk) until the shaking stops.
-🚫 DO NOT run outside during shaking—it’s dangerous.
-📌 If in bed, stay there and cover your head with a pillow.📌 If in a wheelchair, lock the wheels and protect your head and neck.📌 If in a high-rise building, stay inside and move away from windows.
+✅ Check for Injuries & Seek Medical Help
+Treat minor burns with cool water.
+Call emergency services for severe burns or smoke inhalation.
 
-If You Are Outdoors
-✅ Move to an open space away from buildings, trees, streetlights, and power lines.
-✅ Drop to the ground and cover your head until the shaking stops.
+✅ Wait for Authorities to Declare the Area Safe
+Avoid re-entering the building until officials allow it.
 
-If You Are in a Moving Vehicle
-✅ Pull over safely and stay inside the vehicle.
-✅ Avoid stopping under bridges, overpasses, or near buildings.
+✅ Check for Structural Damage & Hazards
+Be cautious of weakened walls, floors, and electrical hazards.
 
-After an Earthquake (Recovery & Safety Measures)
-
-✅ Check for Injuries
-Provide first aid to those in need.
-Call emergency services if necessary.
-
-✅ Check for Hazards
-Turn off gas, electricity, and water if you suspect damage.
-Beware of aftershocks—stay alert.
-
-✅ Evacuate If Necessary
-If in a tsunami-prone area, move to higher ground immediately.
-Avoid using elevators.
-
-✅ Stay Informed
-Listen to emergency broadcasts for updates.
-Avoid using phones unless for emergencies.
-
-✅ Help Others
-Check on neighbors, especially elderly or disabled individuals.""",
+✅ Help Others & Report Damage
+Assist neighbors, elderly, or disabled individuals.
+Report gas leaks or damaged power lines to authorities.""",
                           style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ],

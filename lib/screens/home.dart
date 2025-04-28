@@ -4,8 +4,13 @@ import 'package:resqlink/screens/disaster2.dart';
 import 'package:resqlink/screens/disaster3.dart';
 import 'package:resqlink/screens/donations.dart';
 import 'package:resqlink/screens/earthquake.dart';
+import 'package:resqlink/screens/fire.dart';
+import 'package:resqlink/screens/flood.dart';
+import 'package:resqlink/screens/landslide.dart';
 import 'package:resqlink/screens/profile.dart';
+import 'package:resqlink/screens/rain.dart';
 import 'package:resqlink/screens/rescue.dart';
+import 'package:resqlink/screens/tsunami.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -137,7 +142,7 @@ class Home extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Earthquake()),
+                                  builder: (context) => Tsunami()),
                             );
                           },
                           child: Padding(
@@ -171,8 +176,7 @@ class Home extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => Earthquake()),
+                              MaterialPageRoute(builder: (context) => Fire()),
                             );
                           },
                           child: Padding(
@@ -210,8 +214,7 @@ class Home extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => Earthquake()),
+                              MaterialPageRoute(builder: (context) => Flood()),
                             );
                           },
                           child: Padding(
@@ -246,7 +249,7 @@ class Home extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Earthquake()),
+                                  builder: (context) => Landslide()),
                             );
                           },
                           child: Padding(
@@ -280,8 +283,7 @@ class Home extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => Earthquake()),
+                              MaterialPageRoute(builder: (context) => Rain()),
                             );
                           },
                           child: Padding(

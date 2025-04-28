@@ -6,12 +6,17 @@ import 'package:resqlink/screens/disaster2.dart';
 import 'package:resqlink/screens/disaster3.dart';
 import 'package:resqlink/screens/donations.dart';
 import 'package:resqlink/screens/earthquake.dart';
+import 'package:resqlink/screens/fire.dart';
+import 'package:resqlink/screens/flood.dart';
 import 'package:resqlink/screens/home.dart';
+import 'package:resqlink/screens/landslide.dart';
 import 'package:resqlink/screens/login.dart';
 import 'package:resqlink/screens/profile.dart';
+import 'package:resqlink/screens/rain.dart';
 import 'package:resqlink/screens/rescue.dart';
 // ignore: unused_import
 import 'package:resqlink/screens/signup.dart';
+import 'package:resqlink/screens/tsunami.dart';
 import 'package:resqlink/screens/volunteer.dart';
 
 void main() {
@@ -31,6 +36,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF1B1919)),
           useMaterial3: false,
         ),
-        home: ProfileScreen());
+        home: Home());
   }
 }
