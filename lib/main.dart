@@ -36,6 +36,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF1B1919)),
           useMaterial3: false,
         ),
-        home: Home());
+        home: Login());
   }
 }
